@@ -1,1 +1,165 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lounge After Dark v2: Image-to-Video Generator</title>
+    <meta name="description" content="AI Lounge After Dark v2: The Next Generation Image-to-Video Generator. Manifesting Vision into Functional Reality with Epic Tech AIGent. Leverage AI to create dynamic videos from static images.">
+    <meta name="keywords" content="AI Lounge After Dark, Image to Video, AI Generator, Stable Video Diffusion, Hugging Face, Flask, Python, Epic Tech AIGent, AI content creation, cyberpunk, neon, web application">
+    <meta name="author" content="Epic Tech AIGent">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ailoungeafterdark.com/"> <!-- Replace with actual URL -->
+    <meta property="og:title" content="AI Lounge After Dark v2: Image-to-Video Generator">
+    <meta property="og:description" content="AI Lounge After Dark v2: The Next Generation Image-to-Video Generator. Manifesting Vision into Functional Reality with Epic Tech AIGent. Leverage AI to create dynamic videos from static images.">
+    <meta property="og:image" content="https://www.ailoungeafterdark.com/static/og-image.jpg"> <!-- Replace with actual image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.ailoungeafterdark.com/"> <!-- Replace with actual URL -->
+    <meta property="twitter:title" content="AI Lounge After Dark v2: Image-to-Video Generator">
+    <meta property="twitter:description" content="AI Lounge After Dark v2: The Next Generation Image-to-Video Generator. Manifesting Vision into Functional Reality with Epic Tech AIGent. Leverage AI to create dynamic videos from static images.">
+    <meta property="twitter:image" content="https://www.ailoungeafterdark.com/static/twitter-image.jpg"> <!-- Replace with actual image -->
+
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AI Lounge After Dark <span class="v2">v2</span></div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#documentation">Documentation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>The Next Generation Image-to-Video Generator</h1>
+            <p>Manifesting Vision into Functional Reality with Epic Tech AIGent</p>
+            <button class="cta-button" onclick="document.getElementById('how-it-works').scrollIntoView({ behavior: 'smooth' });">Get Started</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="features" class="section-dark">
+            <h2>Unleash Dynamic Creativity</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Advanced Image to Video Generation</h3>
+                    <p>Utilizes the stabilityai/stable-video-diffusion-img2vid-xt model via Hugging Face Inference API for high-quality video output.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Modular Flask Architecture</h3>
+                    <p>Implemented with Flask Blueprints and an application factory pattern for better organization, scalability, and maintainability.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Enhanced Error Handling</h3>
+                    <p>Provides more granular and user-friendly feedback for various operational states and errors.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Secure Configuration</h3>
+                    <p>Hugging Face API key and other sensitive settings are securely managed via environment variables (.env).</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Dynamic UI/UX</h3>
+                    <p>A visually stunning, intuitive single-page interface with real-time status updates and a dedicated video player.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>SEO Optimized</h3>
+                    <p>Comprehensive meta tags, semantic HTML, and responsive design for superior search engine visibility and social sharing.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Comprehensive Documentation</h3>
+                    <p>Includes detailed whitepapers on the application’s technical aspects and Epic Tech AIGent’s core philosophy.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Extensible Design</h3>
+                    <p>Ready for integration with contact forms, payment gateways (Stripe), and customer support (Intercom).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="section-light">
+            <h2>Experience the Future of Content Creation</h2>
+            <div class="generator-interface">
+                <div class="upload-section">
+                    <h3>1. Upload Your Image</h3>
+                    <input type="file" id="imageUpload" accept="image/*">
+                    <button id="uploadButton" class="action-button">Upload Image</button>
+                    <p id="uploadStatus" class="status-message"></p>
+                </div>
+                <div class="generate-section">
+                    <h3>2. Generate Your Video</h3>
+                    <button id="generateButton" class="action-button" disabled>Generate Video</button>
+                    <p id="generationStatus" class="status-message"></p>
+                </div>
+                <div class="video-player-section">
+                    <h3>3. Your Generated Video</h3>
+                    <video id="videoPlayer" controls loop muted></video>
+                    <p id="videoMessage" class="status-message"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="technologies" class="section-dark">
+            <h2>Technologies Powering AI Lounge After Dark v2</h2>
+            <div class="tech-grid">
+                <div class="tech-item">Python 3.x</div>
+                <div class="tech-item">Flask</div>
+                <div class="tech-item">Hugging Face Inference API</div>
+                <div class="tech-item">stabilityai/stable-video-diffusion-img2vid-xt</div>
+                <div class="tech-item">HTML5</div>
+                <div class="tech-item">CSS3</div>
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">pip</div>
+                <div class="tech-item">python-dotenv</div>
+            </div>
+        </section>
+
+        <section id="seo-optimization" class="section-light">
+            <h2>SEO Excellence by Design</h2>
+            <p>AI Lounge After Dark v2 is meticulously optimized for search engines to ensure maximum visibility and reach:</p>
+            <ul>
+                <li><strong>Semantic HTML5:</strong> Robust use of <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code> for clear content hierarchy.</li>
+                <li><strong>Comprehensive Meta Tags:</strong> Includes charset, viewport, description, keywords, author, and Open Graph/Twitter Card tags for rich social media previews.</li>
+                <li><strong>Responsive Design:</strong> Ensures a flawless user experience across all devices and screen sizes.</li>
+                <li><strong>Descriptive Content:</strong> Clear titles, headings, and body text enhance readability and keyword relevance.</li>
+                <li><strong>Image Alt Text:</strong> All relevant images will have descriptive alt attributes for accessibility and SEO.</li>
+            </ul>
+        </section>
+
+        <section id="documentation" class="section-dark">
+            <h2>Dive Deeper: Comprehensive Documentation</h2>
+            <p>Explore the in-depth documentation for AI Lounge After Dark v2 and Epic Tech AIGent's core philosophy:</p>
+            <ul>
+                <li><a href="/static/docs/AI_Lounge_After_Dark_Whitepaper.md" target="_blank">AI Lounge After Dark Whitepaper</a></li>
+                <li><a href="/static/docs/Epic_Tech_AIGent_Whitepaper.md" target="_blank">Epic Tech AIGent Whitepaper</a></li>
+                <li><a href="https://huggingface.co/docs/inference-api/index" target="_blank">Hugging Face Inference API Documentation</a></li>
+                <li><a href="https://flask.palletsprojects.com/en/latest/" target="_blank">Flask Documentation</a></li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section-light">
+            <h2>Connect with Epic Tech AIGent</h2>
+            <p>For inquiries, support, or business opportunities, reach out to us:</p>
+            <p><strong>Email:</strong> <a href="mailto:contact@epictech.com">contact@epictech.com</a></p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p><strong>Intercom Chat:</strong> (Look for the chat widget on the live site for real-time support!)</p>
+            <p class="small-text"><em>Payment Integration (Stripe Placeholder): This application is architected for seamless integration with payment gateways. A placeholder for Stripe is included for future monetization models.</em></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Epic Tech AIGent. All rights reserved.</p>
+        <p>Project licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.</p>
+        <p>Bridging Vision with Functional Reality.</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
